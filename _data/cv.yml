@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Francisco Madaleno Ferreira dos Santos
     - name: Date of Birth
-      value: 14th March 1879
+      value: 28th April 1996
     - name: Languages
-      value: English, German
+      value: English, Portuguese, Spanish
 
 - title: Education
   type: time_table
