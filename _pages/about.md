@@ -9,7 +9,6 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to look like a circle
   more_info: >
-    <p>DTU - Technical University of Denmark</p>
     <p>Copenhagen, Denmark</p>
 
 news: false # includes a list of news items
@@ -18,7 +17,7 @@ social: true # includes social icons at the bottom of the page
 
 ---
 
-Hi, I am a second year PhD Student in Machine Learning at [Machine Learning for Smart Mobility](https://mlsm.man.dtu.dk/) group at [Danish Technical University](https://www.dtu.dk/). I am supervised by Professor [Francisco Camara Pereira](https://www.dtu.dk/english/person/francisco-camara-pereira?id=104358&entity=profile) and Associate Professor [Carlos M. Lima Azevedo](https://www.dtu.dk/english/person/carlos-m-lima-azevedo?id=134225&entity=profile). 
+Hi, I am a second year PhD Student in Machine Learning at [Danish Technical University](https://www.dtu.dk/). I am supervised by Professor [Francisco Camara Pereira](https://www.dtu.dk/english/person/francisco-camara-pereira?id=104358&entity=profile) and Associate Professor [Carlos M. Lima Azevedo](https://www.dtu.dk/english/person/carlos-m-lima-azevedo?id=134225&entity=profile). 
 
 I am currently working on the [APEX project](https://mlsm.man.dtu.dk/research-projects/apex/), focusing on how to use causal abstractions and active learning to improve surrogate models.
 
