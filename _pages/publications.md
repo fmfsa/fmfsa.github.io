@@ -15,6 +15,13 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+<h2 class="category">Pre-prints</h2>
+{% bibliography --query @misc %}
+
+<h2 class="category">Publications</h2>
+{% bibliography --query @article %}
+
+<h2 class="category">Books</h2>
+{% bibliography --query @book %}
 
 </div>

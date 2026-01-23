@@ -3,6 +3,8 @@ layout: about
 title: about
 permalink: /
 subtitle: PhD Student in Machine Learning at <a href='https://www.dtu.dk/'>DTU</a>.
+nav: true
+nav_order: 1
 
 profile:
   align: left
