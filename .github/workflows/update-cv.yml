@@ -1,0 +1,51 @@
+name: Update CV
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Share the deploy group so a CV deploy never races a site deploy
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: false
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download CV from Google Docs
+        run: |
+          curl -sSfL --max-time 120 -o /tmp/cv-new.pdf \
+            "https://docs.google.com/document/d/18j3UgEfflxag6yJoWlQZIeg-qgc9fIf1KRzZyJrQAyw/export?format=pdf"
+          head -c 5 /tmp/cv-new.pdf | grep -q '%PDF' || { echo "Download is not a PDF (doc may no longer be link-shared); aborting."; exit 1; }
+          [ "$(wc -c < /tmp/cv-new.pdf)" -gt 10000 ] || { echo "Downloaded PDF is suspiciously small; aborting."; exit 1; }
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          if cmp -s /tmp/cv-new.pdf assets/Francisco-Madaleno-CV.pdf; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "CV unchanged; nothing to do."
+          else
+            mv /tmp/cv-new.pdf assets/Francisco-Madaleno-CV.pdf
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/Francisco-Madaleno-CV.pdf
+            git commit -m "Update CV from Google Doc"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Pushes made with GITHUB_TOKEN don't trigger deploy.yml, so deploy here
+      - name: Deploy to gh-pages
+        if: steps.commit.outputs.changed == 'true'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
+          branch: gh-pages
