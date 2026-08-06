@@ -18,3 +18,7 @@ python3 -m http.server 8000
 ## Deployment
 
 Pushes to `main` trigger `.github/workflows/deploy.yml`, which publishes the repo root to the `gh-pages` branch served by GitHub Pages at https://fmfsa.github.io/.
+
+## CV auto-update
+
+`.github/workflows/update-cv.yml` runs daily (and on manual dispatch): it downloads the CV Google Doc as PDF and, if it changed, commits it to `assets/Francisco-Madaleno-CV.pdf` and redeploys. The doc must stay shared as "Anyone with the link: Viewer" for the export to work.
