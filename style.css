@@ -387,10 +387,18 @@ main > section {
 .pub-entry {
   text-decoration: none;
   display: grid;
-  grid-template-columns: 62px 1fr;
+  grid-template-columns: 62px 132px 1fr;
   gap: 20px;
   border-top: 1px solid var(--hairline);
   padding: 26px 0;
+}
+
+.pub-fig {
+  width: 100%;
+  max-height: 130px;
+  object-fit: contain;
+  object-position: left top;
+  margin-top: 6px;
 }
 
 .pub-entry:hover {
@@ -482,5 +490,13 @@ main > section {
 
   .news-grid {
     grid-template-columns: 90px 1fr;
+  }
+
+  .pub-entry {
+    grid-template-columns: 62px 1fr;
+  }
+
+  .pub-fig {
+    display: none;
   }
 }
