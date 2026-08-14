@@ -247,7 +247,9 @@ main > section {
 }
 
 .pub-row {
-  display: block;
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 20px;
   text-decoration: none;
   border-top: 1px solid var(--hairline);
   padding: 22px 0;
@@ -494,6 +496,10 @@ main > section {
 
   .pub-entry {
     grid-template-columns: 62px 1fr;
+  }
+
+  .pub-row {
+    grid-template-columns: 1fr;
   }
 
   .pub-fig {
