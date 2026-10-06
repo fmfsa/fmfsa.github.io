@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -36,42 +36,54 @@
     </section>
 
     <section class="pub-section">
-      <div class="kicker">Peer-reviewed papers</div>
+      <h2 class="section-title">Peer-reviewed papers</h2>
 
-      <a href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener" class="pub-entry">
-        <div class="pub-year">2026</div>
-        <img class="pub-fig" src="assets/img/preview-coarsening-dag.png" alt="Partition lattice of a four-variable causal model with valid coarsenings highlighted">
-        <div>
-          <div class="pub-title">Coarsening Causal DAG Models</div>
-          <div class="pub-venue">5th Conference on Causal Learning and Reasoning (CLeaR) 2026 · PMLR · Oral presentation</div>
-          <div class="pub-cite">PMLR v323 · madaleno26b →</div>
+      <article class="publication-card">
+        <a class="publication-figure" href="https://arxiv.org/abs/2605.10163" target="_blank" rel="noopener" aria-label="Read Coarsening Linear Non-Gaussian Causal Models with Cycles">
+          <img src="assets/img/preview-coarsening-cycles.png" alt="Two cyclic causal graphs that coarsen to the same three-node chain" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-copy">
+          <h3 class="publication-title"><a href="https://arxiv.org/abs/2605.10163" target="_blank" rel="noopener">Coarsening Linear Non-Gaussian Causal Models with Cycles</a></h3>
+          <p class="publication-authors"><strong>Francisco Madaleno</strong>, Francisco C. Pereira, Alex Markham</p>
+          <p class="publication-summary"><strong>TL;DR:</strong> Recover a compact, acyclic causal summary from a linear non-Gaussian system with feedback cycles, with a worst-case cubic-time algorithm.</p>
+          <div class="publication-meta">
+            <div><span>NeurIPS 2026 · Poster</span><span class="meta-divider" aria-hidden="true"> / </span><a href="https://arxiv.org/abs/2605.10163" target="_blank" rel="noopener">Paper ↗</a></div>
+            <span class="publication-topic">Causal abstraction</span>
+          </div>
         </div>
-      </a>
+      </article>
 
-      <a href="https://proceedings.mlr.press/v323/madaleno26a.html" target="_blank" rel="noopener" class="pub-entry">
-        <div class="pub-year">2026</div>
-        <img class="pub-fig" src="assets/img/preview-bhip.png" alt="Plate diagram of the BHIP hierarchical Bayesian model">
-        <div>
-          <div class="pub-title">Bayesian Hierarchical Invariant Prediction</div>
-          <div class="pub-venue">5th Conference on Causal Learning and Reasoning (CLeaR) 2026 · PMLR · Poster</div>
-          <div class="pub-cite">PMLR v323 · madaleno26a →</div>
+      <article class="publication-card">
+        <a class="publication-figure" href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener" aria-label="Read Coarsening Causal DAG Models">
+          <img src="assets/img/preview-coarsening-dag.png" alt="Partition lattice of a four-variable causal model with valid coarsenings highlighted" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-copy">
+          <h3 class="publication-title"><a href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener">Coarsening Causal DAG Models</a></h3>
+          <p class="publication-authors"><strong>Francisco Madaleno</strong>, Pratik Misra, Alex Markham</p>
+          <p class="publication-summary"><strong>TL;DR:</strong> Learn a simpler causal graph directly from interventional data, even when the intervention targets are unknown.</p>
+          <div class="publication-meta">
+            <div><span>CLeaR 2026 · Oral</span><span class="meta-divider" aria-hidden="true"> / </span><a href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener">Paper ↗</a></div>
+            <span class="publication-topic">Causal abstraction</span>
+          </div>
         </div>
-      </a>
+      </article>
+
+      <article class="publication-card">
+        <a class="publication-figure" href="https://proceedings.mlr.press/v323/madaleno26a.html" target="_blank" rel="noopener" aria-label="Read Bayesian Hierarchical Invariant Prediction">
+          <img src="assets/img/preview-bhip.png" alt="Plate diagram of the BHIP hierarchical Bayesian model" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-copy">
+          <h3 class="publication-title"><a href="https://proceedings.mlr.press/v323/madaleno26a.html" target="_blank" rel="noopener">Bayesian Hierarchical Invariant Prediction</a></h3>
+          <p class="publication-authors"><strong>Francisco Madaleno</strong>, Pernille Julie Viuff Sand, Francisco C. Pereira, Sergio Hernan Garrido Mejia</p>
+          <p class="publication-summary"><strong>TL;DR:</strong> Use hierarchical Bayes to test which causal mechanisms stay invariant across environments, while incorporating prior knowledge and scaling to more predictors.</p>
+          <div class="publication-meta">
+            <div><span>CLeaR 2026 · Poster</span><span class="meta-divider" aria-hidden="true"> / </span><a href="https://proceedings.mlr.press/v323/madaleno26a.html" target="_blank" rel="noopener">Paper ↗</a></div>
+            <span class="publication-topic">Invariant prediction</span>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="pub-section">
-      <div class="kicker">Preprints</div>
-
-      <a href="https://arxiv.org/pdf/2605.10163" target="_blank" rel="noopener" class="pub-entry">
-        <div class="pub-year">2026</div>
-        <img class="pub-fig" src="assets/img/preview-coarsening-cycles.png" alt="Two cyclic causal graphs that coarsen to the same three-node chain">
-        <div>
-          <div class="pub-title">Coarsening Linear Non-Gaussian Causal Models with Cycles</div>
-          <div class="pub-venue">Francisco Madaleno, Francisco C. Pereira, Alex Markham · arXiv preprint</div>
-          <div class="pub-cite">arXiv:2605.10163 →</div>
-        </div>
-      </a>
-    </section>
 
     <section class="pub-section">
       <div class="kicker">Oral presentations</div>

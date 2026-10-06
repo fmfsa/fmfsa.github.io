@@ -1,8 +1,8 @@
-/* Francisco Madaleno — personal academic site
-   Design tokens per design_handoff_personal_site/README.md */
+/* Francisco Madaleno — personal academic site */
 
 :root {
-  --bg: #f5f3ee;
+  --bg: #ffffff;
+  --cream: #f5f3ee;
   --ink: #1d1b17;
   --body: #33302a;
   --body-2: #46423a;
@@ -45,7 +45,7 @@ a {
 
 /* Header */
 .site-header {
-  max-width: 920px;
+  max-width: 1064px;
   margin: 0 auto;
   padding: 26px 32px;
   display: flex;
@@ -83,7 +83,7 @@ a {
 
 /* Layout */
 main {
-  max-width: 920px;
+  max-width: 1064px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -246,47 +246,6 @@ main > section {
   text-decoration: none;
 }
 
-.pub-row {
-  display: grid;
-  grid-template-columns: 132px 1fr;
-  gap: 20px;
-  text-decoration: none;
-  border-top: 1px solid var(--hairline);
-  padding: 22px 0;
-}
-
-.pub-row:hover {
-  background: var(--hover);
-}
-
-.pub-row-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: baseline;
-}
-
-.pub-row-title {
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 1.35;
-  max-width: 46ch;
-}
-
-.pub-row-tag {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--faint);
-  white-space: nowrap;
-}
-
-.pub-row-venue {
-  font-size: 15px;
-  color: var(--muted);
-  font-weight: 300;
-  margin-top: 6px;
-}
-
 /* News */
 .news {
   padding: 66px 0;
@@ -311,7 +270,7 @@ main > section {
 
 /* Footer */
 .site-footer {
-  max-width: 920px;
+  max-width: 1064px;
   margin: 0 auto;
   padding: 56px 32px 70px;
 }
@@ -386,54 +345,11 @@ main > section {
   padding: 56px 0;
 }
 
-.pub-entry {
-  text-decoration: none;
-  display: grid;
-  grid-template-columns: 62px 132px 1fr;
-  gap: 20px;
-  border-top: 1px solid var(--hairline);
-  padding: 26px 0;
-}
-
-.pub-fig {
-  width: 100%;
-  max-height: 130px;
-  object-fit: contain;
-  object-position: left top;
-  margin-top: 6px;
-}
-
-.pub-entry:hover {
-  background: var(--hover);
-}
-
 .pub-year {
   font-family: var(--mono);
   font-size: 13px;
   color: var(--accent);
   padding-top: 6px;
-}
-
-.pub-title {
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.32;
-}
-
-.pub-venue {
-  font-size: 16px;
-  color: var(--body-2);
-  font-weight: 300;
-  margin-top: 8px;
-  line-height: 1.55;
-}
-
-.pub-cite {
-  margin-top: 9px;
-  font-family: var(--mono);
-  font-size: 12.5px;
-  letter-spacing: 0.03em;
-  color: var(--accent);
 }
 
 /* Talks */
@@ -469,40 +385,104 @@ main > section {
   border-bottom: none;
 }
 
-/* Mobile fallback — not part of the design handoff (desktop-only spec);
-   minimal stacking so nothing overflows on small screens */
-@media (max-width: 700px) {
-  .hero,
-  .about,
-  .interests-grid {
-    grid-template-columns: 1fr;
-  }
+/* Large paper figures on white, set into the site's original cream. */
+.section-title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
 
-  .hero {
-    gap: 32px;
-  }
+.pub-section > .section-title { margin-bottom: 28px; }
 
-  .hero h1 {
-    font-size: 34px;
-  }
+.publication-card {
+  display: grid;
+  grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
+  gap: 26px;
+  padding: 22px;
+  margin-top: 20px;
+  background: var(--cream);
+  border: 1px solid #efebe2;
+  border-radius: 16px;
+}
 
-  .pub-row-top {
-    flex-wrap: wrap;
-  }
+.publication-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: 9px;
+}
 
-  .news-grid {
-    grid-template-columns: 90px 1fr;
-  }
+.publication-figure img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
 
-  .pub-entry {
-    grid-template-columns: 62px 1fr;
-  }
+.publication-copy { display: flex; flex-direction: column; padding: 2px 0; }
+.publication-title { font-size: 25px; line-height: 1.25; font-weight: 500; letter-spacing: -0.018em; }
+.publication-title a { text-decoration: none; }
+.publication-title a:hover { color: var(--accent); }
+.publication-authors { margin-top: 12px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.publication-authors strong { font-weight: 500; color: var(--body); }
+.publication-summary { margin: 15px 0 24px; font-size: 17px; line-height: 1.5; color: var(--body); }
+.publication-summary strong { font-weight: 600; }
+.publication-meta { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; color: var(--muted); }
+.publication-meta a { color: var(--accent); text-decoration: none; white-space: nowrap; }
+.publication-meta a:hover { text-decoration: underline; }
+.meta-divider { padding: 0 5px; color: var(--ghost); }
+.publication-topic { border: 1px solid var(--hairline); border-radius: 20px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; line-height: 1.5; }
 
-  .pub-row {
-    grid-template-columns: 1fr;
-  }
+/* Nodes become a network, a causal graph, and a coarser abstraction. */
+main > .hero { border-bottom: none; padding-bottom: 24px; }
+.research-graph { margin: 4px 0 0; padding: 0 28px 22px; border-bottom: 1px solid var(--hairline); }
+.research-graph svg { display: block; width: 100%; height: clamp(150px, 25vw, 250px); overflow: visible; }
+.graph-edges { stroke: #b7ae9b; stroke-width: 1.5; }
+#graph-arrow path { fill: none; stroke: #b7ae9b; stroke-width: 1.1; }
+.graph-nodes circle { fill: var(--cream); stroke: #8e826c; stroke-width: 1.6; }
+.graph-controls { display: flex; justify-content: flex-end; font-family: var(--mono); font-size: 11px; }
+.graph-toggle { border: 0; background: transparent; font: inherit; color: var(--muted); cursor: pointer; padding: 8px 0 8px 12px; }
+.graph-toggle:hover { color: var(--ink); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
 
-  .pub-fig {
-    display: none;
-  }
+@media (max-width: 800px) {
+  .hero { gap: 32px; }
+  .about { grid-template-columns: 1fr 180px; gap: 32px; }
+  .publication-card { grid-template-columns: minmax(0, 34%) minmax(0, 1fr); gap: 20px; padding: 18px; }
+  .publication-title { font-size: 22px; }
+  .publication-figure { padding: 12px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 22px 22px; flex-wrap: wrap; gap: 18px; }
+  .site-nav { gap: 22px; font-size: 11px; }
+  main { padding: 0 22px; }
+  .hero { grid-template-columns: 1fr; padding-top: 42px; gap: 28px; }
+  .hero h1 { font-size: 38px; }
+  .hero .kicker { font-size: 10.5px; line-height: 1.7; }
+  .hero-lede { font-size: 18px; }
+  .headshot { width: 150px; height: 150px; }
+  .research-graph { padding: 0 0 14px; }
+  .graph-controls { font-size: 9px; }
+  .graph-toggle { padding-left: 0; }
+  .about, .interests-grid { grid-template-columns: 1fr; }
+  .about { gap: 24px; }
+  .about, .interests, .selected-pubs, .news, .pub-section { padding: 42px 0; }
+  .section-head { flex-wrap: wrap; gap: 16px; margin-bottom: 24px; }
+  .section-title { font-size: 28px; }
+  .publication-card { grid-template-columns: 1fr; padding: 16px; gap: 20px; }
+  .publication-figure { min-height: 230px; }
+  .publication-figure img { height: 220px; }
+  .publication-summary { font-size: 16.5px; }
+  .publication-meta { gap: 14px; }
+  .news-grid { grid-template-columns: 75px 1fr; gap: 16px; }
+  .news-date { font-size: 11px; }
+  .site-footer { padding: 42px 22px; }
+  .page-intro { padding: 50px 0 36px; }
+  .page-intro h1 { font-size: 38px; }
 }
