@@ -7,7 +7,10 @@ Plain static site, no build step:
 - `index.html` — home (hero, about, research interests, selected publications, news)
 - `publications.html` — peer-reviewed papers, preprints, and talks
 - `style.css` — all styling (design tokens in `:root`)
-- `assets/` — headshot and CV PDF
+- `assets/` — headshot, publication figures, CV PDF, and the network-to-abstraction animation
+
+The page background is white; publication cards use the original cream (`--cream`).
+The SVG animation moves from isolated nodes to a neural network, then a causal DAG whose nodes merge into an abstraction. The script in `assets/research-graph.js` supports pause/play, respects reduced-motion preferences, and stops updating when offscreen.
 
 ## Local preview
 
