@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Francisco Madaleno</title>
-  <meta name="description" content="Francisco Madaleno — PhD candidate at the Technical University of Denmark working on causality and machine learning.">
+  <meta name="description" content="Francisco Madaleno — PhD candidate at the Technical University of Denmark working on causality and AI.">
   <link rel="canonical" href="https://fmfsa.github.io/">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Francisco Madaleno">
-  <meta property="og:description" content="PhD candidate at the Technical University of Denmark working on causality and machine learning.">
+  <meta property="og:description" content="PhD candidate at the Technical University of Denmark working on causality and AI.">
   <meta property="og:url" content="https://fmfsa.github.io/">
   <meta property="og:image" content="https://fmfsa.github.io/assets/headshot.jpg">
   <meta name="twitter:card" content="summary">
@@ -31,7 +31,7 @@
       "name": "Instituto Superior Técnico",
       "url": "https://tecnico.ulisboa.pt/en/"
     },
-    "knowsAbout": ["Causality", "Machine Learning", "Active Learning", "Bayesian Optimization"],
+    "knowsAbout": ["Causality", "Causal Abstraction", "Bounded Rationality", "Machine Learning", "Active Learning", "Bayesian Optimization"],
     "sameAs": [
       "https://scholar.google.com/citations?user=W71v46sAAAAJ",
       "https://github.com/fmfsa",
@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -60,49 +60,20 @@
 
     <section class="hero">
       <div>
-        <div class="kicker kicker--accent">PhD Candidate · Causality and Machine Learning</div>
-        <h1>Causality and Machine Learning.</h1>
-        <p class="hero-lede">I study how causality and machine learning can help us understand and learn from complex simulations.</p>
+        <div class="kicker kicker--accent">PhD Candidate · Causality and AI</div>
+        <h1>Causality and AI.</h1>
+        <p class="hero-lede">I study how complex systems can be reduced to models we can reason about, and how general AI systems can be narrowed to do only what they should.</p>
       </div>
       <img src="assets/headshot.jpg" alt="Francisco Madaleno" class="headshot">
     </section>
 
-    <figure class="research-graph" aria-label="An illustration of learning and causal abstraction">
+    <figure class="research-graph" aria-label="An illustration of causal coarsening narrowing a model to a bounded pathway">
       <svg viewBox="0 0 930 340" role="img" aria-labelledby="graph-title graph-description">
-        <title id="graph-title">Learning structure and abstraction</title>
-        <desc id="graph-description">Isolated nodes form a neural network, reorganize into a causal directed acyclic graph, and merge into seven abstract nodes.</desc>
-        <defs>
-          <marker id="graph-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 1 1 L 7 4 L 1 7"/></marker>
-        </defs>
-        <g class="graph-edges"></g>
-        <g class="graph-nodes">
-          <circle cx="48" cy="28" r="7"/>
-          <circle cx="77" cy="128" r="7"/>
-          <circle cx="51" cy="202" r="7"/>
-          <circle cx="80" cy="302" r="7"/>
-          <circle cx="257" cy="39" r="7"/>
-          <circle cx="286" cy="104" r="7"/>
-          <circle cx="260" cy="144" r="7"/>
-          <circle cx="289" cy="184" r="7"/>
-          <circle cx="263" cy="249" r="7"/>
-          <circle cx="292" cy="289" r="7"/>
-          <circle cx="466" cy="50" r="7"/>
-          <circle cx="440" cy="90" r="7"/>
-          <circle cx="469" cy="155" r="7"/>
-          <circle cx="443" cy="195" r="7"/>
-          <circle cx="472" cy="260" r="7"/>
-          <circle cx="446" cy="300" r="7"/>
-          <circle cx="675" cy="36" r="7"/>
-          <circle cx="649" cy="114" r="7"/>
-          <circle cx="678" cy="167" r="7"/>
-          <circle cx="652" cy="245" r="7"/>
-          <circle cx="626" cy="298" r="7"/>
-          <circle cx="829" cy="47" r="7"/>
-          <circle cx="858" cy="165" r="7"/>
-          <circle cx="832" cy="308" r="7"/>
-        </g>
+        <title id="graph-title">Causal coarsening and a bounded pathway</title>
+        <desc id="graph-description">A system observed only through micro-level data: seven clouds of noisy points, with no known structure, inside a lens that covers everything. The lens constricts: each cloud it lets go of is condensed into a macro-variable, and causal arrows are learned only between macro-variables. The lens closes on the macro-variable a task depends on, which defines a pathway from input to output. Off-task structure dims to a faint background, a steady signal flows along the pathway, and a signal leaking into an off-task branch fades out.</desc>
       </svg>
       <div class="graph-controls">
+        <span class="graph-caption" aria-hidden="true"></span>
         <button class="graph-toggle" type="button" hidden>Pause animation</button>
       </div>
     </figure>
@@ -111,7 +82,7 @@
       <div>
         <div class="kicker">About</div>
         <div class="about-text">
-          <p>I'm a PhD candidate at the <strong><a href="https://www.dtu.dk/english" target="_blank" rel="noopener">Technical University of Denmark</a></strong>, supervised by <a href="https://scholar.google.com/citations?user=k7pIUY0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Francisco C. Pereira</a> and <a href="https://scholar.google.com/citations?user=jQkz9EwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Carlos Lima Azevedo</a>. I am currently working on the <a href="https://mlsm.man.dtu.dk/research-projects/apex/" target="_blank" rel="noopener">APEX</a> project in the <a href="https://mlsm.man.dtu.dk/" target="_blank" rel="noopener">Machine Learning for Smart Mobility</a> group. I am also an Academic Visitor in the group of <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/" target="_blank" rel="noopener">Michael Wooldridge</a> and <a href="https://www.cs.ox.ac.uk/people/ani.calinescu/" target="_blank" rel="noopener">Ani Calinescu</a> at the University of Oxford, working on the <a href="https://boundedagents.ai/" target="_blank" rel="noopener">Bounded Agents</a> project. My research focuses on learning causal abstractions and applying them to simulation.</p>
+          <p>I'm a PhD candidate at the <strong><a href="https://www.dtu.dk/english" target="_blank" rel="noopener">Technical University of Denmark</a></strong>, supervised by <a href="https://scholar.google.com/citations?user=k7pIUY0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Francisco C. Pereira</a> and <a href="https://scholar.google.com/citations?user=jQkz9EwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Carlos Lima Azevedo</a>. I am currently working on the <a href="https://mlsm.man.dtu.dk/research-projects/apex/" target="_blank" rel="noopener">APEX</a> project in the <a href="https://mlsm.man.dtu.dk/" target="_blank" rel="noopener">Machine Learning for Smart Mobility</a> group. I am also an Academic Visitor in the group of <a href="https://www.cs.ox.ac.uk/people/michael.wooldridge/" target="_blank" rel="noopener">Michael Wooldridge</a> and <a href="https://www.cs.ox.ac.uk/people/ani.calinescu/" target="_blank" rel="noopener">Ani Calinescu</a> at the University of Oxford, working on the <a href="https://boundedagents.ai/" target="_blank" rel="noopener">Bounded Agents</a> project. I am interested in causality and bounded rationality: how complex systems can be simplified into tractable models, and how broad AI systems can be narrowed into safer, bounded agents.</p>
           <p>Before the PhD I spent three years as an <strong>Applied Scientist at Zalando</strong>, designing large-scale optimization and machine-learning systems for logistics networks and pricing.</p>
           <p>I hold an MSc in Aerospace Engineering from <a href="https://tecnico.ulisboa.pt/en/" target="_blank" rel="noopener">Instituto Superior Técnico</a>, where I specialized in Computational Fluid Mechanics.</p>
         </div>
@@ -126,19 +97,19 @@
       <div class="interests-grid">
         <div class="interest">
           <div class="interest-title">Causality</div>
-          <div class="interest-desc">Causal abstractions and representation learning.</div>
+          <div class="interest-desc">Causal abstraction and simplifying complex systems into tractable models.</div>
         </div>
         <div class="interest">
-          <div class="interest-title">Active learning</div>
-          <div class="interest-desc">Experimental design for simulators and surrogates.</div>
+          <div class="interest-title">Bounded rationality</div>
+          <div class="interest-desc">Narrowing broad AI systems into safer, bounded agents.</div>
         </div>
         <div class="interest">
-          <div class="interest-title">Machine Learning</div>
-          <div class="interest-desc">Probabilistic modeling and prediction under distribution shift.</div>
+          <div class="interest-title">Machine learning</div>
+          <div class="interest-desc">Probabilistic modeling and invariant prediction under distribution shift.</div>
         </div>
         <div class="interest">
-          <div class="interest-title">Optimization</div>
-          <div class="interest-desc">Bayesian and black-box optimization for complex systems.</div>
+          <div class="interest-title">Active learning &amp; optimization</div>
+          <div class="interest-desc">Experimental design and Bayesian optimization for simulators.</div>
         </div>
       </div>
     </section>
@@ -222,6 +193,6 @@
     <div class="copyright">© 2026 Francisco Madaleno — Technical University of Denmark</div>
   </footer>
 
-  <script src="assets/research-graph.js?v=2" defer></script>
+  <script src="assets/research-graph.js?v=7" defer></script>
 </body>
 </html>
