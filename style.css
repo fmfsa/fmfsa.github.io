@@ -1,18 +1,21 @@
 /* Francisco Madaleno — personal academic site */
 
 :root {
-  --bg: #ffffff;
-  --cream: #f5f3ee;
-  --ink: #1d1b17;
-  --body: #33302a;
-  --body-2: #46423a;
-  --muted: #6f6a60;
-  --faint: #8a8478;
-  --ghost: #a39d8f;
-  --hairline: #e2ddd2;
-  --accent: #3a5a7d;
-  --hover: #efece4;
-  --selection: #dcd7cb;
+  --bg: #fafcfc;
+  --cream: #e9f3f1;
+  --ink: #0f1a19;
+  --body: #24332f;
+  --body-2: #34443f;
+  --muted: #5b6c68;
+  --faint: #788884;
+  --ghost: #9fadaa;
+  --hairline: #d6e4e1;
+  --accent: #2a7c6f;
+  --hover: #e2eeeb;
+  --selection: #c9e1dc;
+  --card-border: #dfebe8;
+  --graph-edge: #a2bbb6;
+  --graph-node: #66897f;
   --serif: "Spectral", Georgia, serif;
   --mono: "IBM Plex Mono", monospace;
 }
@@ -402,7 +405,7 @@ main > section {
   padding: 22px;
   margin-top: 20px;
   background: var(--cream);
-  border: 1px solid #efebe2;
+  border: 1px solid var(--card-border);
   border-radius: 16px;
 }
 
@@ -438,15 +441,22 @@ main > section {
 .meta-divider { padding: 0 5px; color: var(--ghost); }
 .publication-topic { border: 1px solid var(--hairline); border-radius: 20px; padding: 4px 10px; font-family: var(--mono); font-size: 10px; line-height: 1.5; }
 
-/* Nodes become a network, a causal graph, and a coarser abstraction. */
+/* Micro-level data is coarsened into macro-variables under a constricting lens. */
 main > .hero { border-bottom: none; padding-bottom: 24px; }
 .research-graph { margin: 4px 0 0; padding: 0 28px 22px; border-bottom: 1px solid var(--hairline); }
 .research-graph svg { display: block; width: 100%; height: clamp(150px, 25vw, 250px); overflow: visible; }
-.graph-edges { stroke: #b7ae9b; stroke-width: 1.5; }
-#graph-arrow path { fill: none; stroke: #b7ae9b; stroke-width: 1.1; }
-.graph-nodes circle { fill: var(--cream); stroke: #8e826c; stroke-width: 1.6; }
-.graph-controls { display: flex; justify-content: flex-end; font-family: var(--mono); font-size: 11px; }
-.graph-toggle { border: 0; background: transparent; font: inherit; color: var(--muted); cursor: pointer; padding: 8px 0 8px 12px; }
+.graph-edges { stroke: var(--graph-edge); stroke-width: 1.5; }
+#graph-arrow path { fill: none; stroke: var(--graph-edge); stroke-width: 1.1; }
+.graph-nodes circle { fill: var(--cream); stroke: var(--graph-node); stroke-width: 1.6; }
+.graph-samples circle { fill: var(--graph-node); fill-opacity: 0.6; }
+.graph-lens { fill: var(--accent); fill-opacity: 0.04; stroke: var(--accent); stroke-opacity: 0.5; stroke-width: 1.2; stroke-dasharray: 4 5; }
+.graph-kept-edges { stroke: var(--accent); stroke-width: 2.2; }
+.graph-pulses circle { fill: var(--accent); }
+.graph-flash-edges { stroke: var(--accent); stroke-width: 2.4; }
+.graph-nodes circle.graph-kept-node { fill: none; stroke: var(--accent); stroke-width: 2.2; }
+.graph-controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--mono); font-size: 11px; }
+.graph-caption { color: var(--faint); letter-spacing: 0.04em; }
+.graph-toggle { white-space: nowrap; border: 0; background: transparent; font: inherit; color: var(--muted); cursor: pointer; padding: 8px 0 8px 12px; }
 .graph-toggle:hover { color: var(--ink); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 2px; }
 
