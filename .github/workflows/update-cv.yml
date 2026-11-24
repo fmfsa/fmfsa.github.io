@@ -19,11 +19,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download CV from Google Docs
+      - name: Download CV PDF from Google Drive
         run: |
           curl -sSfL --max-time 120 -o /tmp/cv-new.pdf \
-            "https://docs.google.com/document/d/18j3UgEfflxag6yJoWlQZIeg-qgc9fIf1KRzZyJrQAyw/export?format=pdf"
-          head -c 5 /tmp/cv-new.pdf | grep -q '%PDF' || { echo "Download is not a PDF (doc may no longer be link-shared); aborting."; exit 1; }
+            "https://drive.google.com/uc?export=download&id=1y3lTihtvzd0aBm5dWGyCKdHxXF9JHF-w"
+          head -c 5 /tmp/cv-new.pdf | grep -q '%PDF' || { echo "Download is not a PDF (file may no longer be link-shared); aborting."; exit 1; }
           [ "$(wc -c < /tmp/cv-new.pdf)" -gt 10000 ] || { echo "Downloaded PDF is suspiciously small; aborting."; exit 1; }
 
       - name: Commit if changed
@@ -37,7 +37,7 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add assets/Francisco-Madaleno-CV.pdf
-            git commit -m "Update CV from Google Doc"
+            git commit -m "Update CV from Google Drive"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi

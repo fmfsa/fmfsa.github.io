@@ -24,4 +24,4 @@ Pushes to `main` trigger `.github/workflows/deploy.yml`, which publishes the rep
 
 ## CV auto-update
 
-`.github/workflows/update-cv.yml` runs daily (and on manual dispatch): it downloads the CV Google Doc as PDF and, if it changed, commits it to `assets/Francisco-Madaleno-CV.pdf` and redeploys. The doc must stay shared as "Anyone with the link: Viewer" for the export to work.
+`.github/workflows/update-cv.yml` runs daily (and on manual dispatch): it downloads the CV PDF from Google Drive and, if it changed, commits it to `assets/Francisco-Madaleno-CV.pdf` and redeploys. The file must stay shared as "Anyone with the link: Viewer". To update the CV, replace the file in Drive with "Manage versions" so its ID (and the workflow's link) stays the same.

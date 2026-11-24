@@ -42,8 +42,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
@@ -67,15 +67,11 @@
       <img src="assets/headshot.jpg" alt="Francisco Madaleno" class="headshot">
     </section>
 
-    <figure class="research-graph" aria-label="An illustration of causal coarsening narrowing a model to a bounded pathway">
+    <figure class="research-graph" aria-label="An illustration of coarsening a cyclic causal model">
       <svg viewBox="0 0 930 340" role="img" aria-labelledby="graph-title graph-description">
-        <title id="graph-title">Causal coarsening and a bounded pathway</title>
-        <desc id="graph-description">A system observed only through micro-level data: seven clouds of noisy points, with no known structure, inside a lens that covers everything. The lens constricts: each cloud it lets go of is condensed into a macro-variable, and causal arrows are learned only between macro-variables. The lens closes on the macro-variable a task depends on, which defines a pathway from input to output. Off-task structure dims to a faint background, a steady signal flows along the pathway, and a signal leaking into an off-task branch fades out.</desc>
+        <title id="graph-title">Causal coarsening</title>
+        <desc id="graph-description">A system observed only through micro-level data: a field of scattered points with no known structure. The points swirl together and condense into variables, and curved causal arrows are drawn between them, including three feedback cycles. Each cycle then merges into a single node, leaving an acyclic coarse graph, before everything dissolves back into data and the cycle repeats.</desc>
       </svg>
-      <div class="graph-controls">
-        <span class="graph-caption" aria-hidden="true"></span>
-        <button class="graph-toggle" type="button" hidden>Pause animation</button>
-      </div>
     </figure>
 
     <section class="about">
@@ -142,7 +138,7 @@
           <p class="publication-authors"><strong>Francisco Madaleno</strong>, Pratik Misra, Alex Markham</p>
           <p class="publication-summary"><strong>TL;DR:</strong> Learn a simpler causal graph directly from interventional data, even when the intervention targets are unknown.</p>
           <div class="publication-meta">
-            <div><span>CLeaR 2026 · Oral</span><span class="meta-divider" aria-hidden="true"> / </span><a href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener">Paper ↗</a></div>
+            <div><span>CLeaR 2026 · <span class="award">★ Oral</span></span><span class="meta-divider" aria-hidden="true"> / </span><a href="https://proceedings.mlr.press/v323/madaleno26b.html" target="_blank" rel="noopener">Paper ↗</a></div>
             <span class="publication-topic">Causal abstraction</span>
           </div>
         </div>
@@ -193,6 +189,6 @@
     <div class="copyright">© 2026 Francisco Madaleno — Technical University of Denmark</div>
   </footer>
 
-  <script src="assets/research-graph.js?v=7" defer></script>
+  <script src="assets/research-graph.js?v=11" defer></script>
 </body>
 </html>
